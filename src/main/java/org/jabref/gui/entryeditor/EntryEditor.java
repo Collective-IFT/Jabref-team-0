@@ -61,6 +61,8 @@ import org.jabref.preferences.PreferencesService;
 import com.airhacks.afterburner.views.ViewLoader;
 import com.tobiasdiez.easybind.EasyBind;
 import com.tobiasdiez.easybind.Subscription;
+
+import de.saxsys.mvvmfx.FxmlPath;
 import jakarta.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -244,6 +246,16 @@ public class EntryEditor extends BorderPane {
     @FXML
     private void navigateToNextEntry() {
         libraryTab.selectNextEntry();
+    }
+
+    @FXML
+    private void navigateToLastEntry() {
+        libraryTab.selectLastEntry();
+    }
+
+    @FXML
+    private void navigateToFirstEntry() {
+        libraryTab.selectFirstEntry();
     }
 
     private List<EntryEditorTab> createTabs() {
