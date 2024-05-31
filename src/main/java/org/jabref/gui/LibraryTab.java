@@ -32,6 +32,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 import javafx.util.Duration;
 
+import org.jabref.gui.LibraryTab.DatabaseNotification;
 import org.jabref.gui.actions.StandardActions;
 import org.jabref.gui.autocompleter.AutoCompletePreferences;
 import org.jabref.gui.autocompleter.PersonNameSuggestionProvider;
@@ -653,6 +654,15 @@ public class LibraryTab extends Tab {
 
     public void selectNextEntry() {
         mainTable.getSelectionModel().clearAndSelect(mainTable.getSelectionModel().getSelectedIndex() + 1);
+    }
+
+    LibraryTab.java 
+public void selectFirstEntry() {
+        mainTable.clearAndSelectFirst();
+    }
+
+    public void selectLastEntry() {
+        mainTable.clearAndSelectLast();
     }
 
     /**
